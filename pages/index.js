@@ -72,7 +72,21 @@ export default function Home({ products }) {
           // install Swiper modules
           modules={[A11y]}
           spaceBetween={20}
-          slidesPerView={12}
+          slidesPerView={4}
+          breakpoints={{
+            640: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 7,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 12,
+              spaceBetween: 20,
+            },
+          }}
           // navigation
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
@@ -362,7 +376,7 @@ export default function Home({ products }) {
                 <div class="col-widget deals-day">
                   <h4 class="widget-title">Deals of the Day</h4>
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                       <div class="deals-card">
                         <div class="img-area">
                           <Image
@@ -378,7 +392,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                       <div class="deals-card">
                         <div class="img-area">
                           <Image
@@ -394,7 +408,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                       <div class="deals-card">
                         <div class="img-area">
                           <Image
@@ -410,7 +424,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                       <div class="deals-card">
                         <div class="img-area">
                           <Image
@@ -464,7 +478,7 @@ export default function Home({ products }) {
                 <div class="col-widget deals-day left-of-area">
                   <h4 class="widget-title">Pickup where you left off</h4>
                   <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  col-4">
                       <div class="left-of-card">
                         <div class="img-area">
                           <Image
@@ -479,7 +493,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  col-4">
                       <div class="left-of-card">
                         <div class="img-area">
                           <Image
@@ -494,7 +508,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  col-4">
                       <div class="left-of-card">
                         <div class="img-area">
                           <Image
@@ -509,7 +523,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  col-4">
                       <div class="left-of-card">
                         <div class="img-area">
                           <Image
@@ -524,7 +538,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  col-4">
                       <div class="left-of-card">
                         <div class="img-area">
                           <Image
@@ -539,7 +553,7 @@ export default function Home({ products }) {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4  col-4">
                       <div class="left-of-card">
                         <div class="img-area">
                           <Image

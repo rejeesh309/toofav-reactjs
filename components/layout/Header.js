@@ -74,7 +74,14 @@ export default function Header() {
             <div className="top-header">
                 <div className="container-fluid">
                     <div class="row justify-content-center align-items-center">
-                        <div class="col-auto">
+                        <div class="col-md-auto col d-flex align-items-center order-md-1">
+                            
+                        <div className='hamburg-contain d-md-none d-inline-block'>
+                            <Button className='btn btn-hamburg' onClick={handleShow}>
+                                <img src='/hamburger-2.svg' className='hamburg-icon'/>
+                            </Button>
+                        </div>
+
                         <Link className="logo" href='/'>
                             <Image
                                 className="main-logo"
@@ -85,7 +92,33 @@ export default function Header() {
                                 priority
                             />
                             </Link></div>
-                        <div class="col">
+                        <div class="col-auto order-md-3">
+                            <div className='right-navs'>
+                                <Nav className='d-flex align-items-center'>
+                                <Nav.Item className='d-none d-md-inline-block'>
+                                    <Nav.Link  onClick={cartShow}>
+                                        <img src='/cart-icon-01.svg' className='icon me-md-4'/>
+                                        <span className='cart-count'>05</span>
+                                        <span className='d-none d-md-inline-block'>Cart</span>
+                                        </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="link-1"   onClick={wishlistShow}>
+                                        <img src='/wishlist-01.svg' className='icon me-md-2'/>
+                                        <span className='d-none d-md-inline-block'>Wishlist</span>
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item className='d-none d-md-inline-block'>
+                                    <Nav.Link eventKey="link-2" onClick={authShow} className='d-flex'>
+                                        <img src='/user-01.svg' className='icon me-2'/>
+                                        <div>
+                                        <span className='wlcm-txt'>Welcome</span> <br/>
+                                        User name</div></Nav.Link>
+                                </Nav.Item>
+                                </Nav>
+                            </div>
+                        </div>
+                        <div class="col-md col-12 order-md-2 mt-md-0 mt-2">
                             <div class="input-group">
                             <Form.Select aria-label="Default select example" className='seach-select'>
                                 <option>All Categories</option>
@@ -97,34 +130,10 @@ export default function Header() {
                             <img src='/search-01.svg' className='seach-icon'/>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <div className='right-navs'>
-                                <Nav className='d-flex align-items-center'>
-                                <Nav.Item>
-                                    <Nav.Link  onClick={cartShow}>
-                                        <img src='/cart-icon-01.svg' className='icon me-4'/>
-                                        <span className='cart-count'>05</span>
-                                        Cart</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="link-1"   onClick={wishlistShow}>
-                                        <img src='/wishlist-01.svg' className='icon me-2'/>
-                                        Wishlist</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="link-2" onClick={authShow} className='d-flex'>
-                                        <img src='/user-01.svg' className='icon me-2'/>
-                                        <div>
-                                        <span className='wlcm-txt'>Welcome</span> <br/>
-                                        User name</div></Nav.Link>
-                                </Nav.Item>
-                                </Nav>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <Navbar bg="" expand="lg" className='class="navbar navbar-expand-lg bg-body-tertiary'>
+            <Navbar bg="" expand="lg" className='d-none d-md-block navbar navbar-expand-lg bg-body-tertiary'>
             <Container fluid>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

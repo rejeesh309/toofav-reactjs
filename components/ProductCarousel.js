@@ -75,7 +75,21 @@ export default function ProductCarousel({ products, itemCount, caroselTitle, fla
             <Swiper
               modules={[A11y, Navigation]}
               spaceBetween={20}
-              slidesPerView={itemCount}
+              slidesPerView={2}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: {itemCount},
+                  spaceBetween: 20,
+                },
+              }}
               // navigation
               onInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevRef.current;

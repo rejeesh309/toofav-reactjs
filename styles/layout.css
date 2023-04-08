@@ -98,7 +98,7 @@ a.btn{
     flex: 0 0 auto;
     border-top-left-radius: 10px !important;
     border-bottom-left-radius: 10px !important;
-    background: var(--whiteColor);
+    background-color: var(--whiteColor);
   }
   .right-navs .nav-link{
     color: var(--whiteColor);
@@ -1932,4 +1932,61 @@ a.btn{
 }
 .product-gallery .product-thumb{
   height: 120px;
+}
+
+@media (max-width: 767.98px) { 
+  .top-header .main-logo{
+    max-width: 135px;
+  }
+  .main-header .top-header {
+    padding: 10px 0px;
+  }
+  .main-banner .swiper-slide {
+    height: 175px;
+  }
+  .right-navs .nav-link {
+    padding: 0px 2px
+  }
+  .btn-hamburg {
+    padding: 3px 5px
+  }
+  .form-select,
+  .form-control,
+  body{
+    font-size: 14px;
+  }
+  .main-header .form-control {
+    padding-right: 35px;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-control {
+    flex: 1;
+    margin-left: 10px;
+  }
+  .category-carousel .cate-item .bg-image {
+    height: 75px;
+  }
+  .category-carousel .cate-item .icon-img {
+    top: 25px;
+    width: 30px;
+    height: 30px;
+  }
+  .category-carousel .cate-item .cate-name {
+    font-size: 13px;
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+  .offer-min-banner .offer-card .img-area {
+    height: 110px;
+  }
+  .offer-mini-banner-3  .offer-card .img-area {
+    height: 110px;
+  }
+  .prdct-ban-sldr .vertic-img-area {
+    height: 200px;
+  }
 }

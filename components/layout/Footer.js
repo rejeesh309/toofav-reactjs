@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="footer-top">
                 <div className="container-fluid">
                     <div class="row justify-content-center align-items-center">
-                        <div class="col">
+                        <div class="col-md col-12">
                             <div className="left-cont">
                                 <h3 className="title">
                                     We’re Always Here To Help
@@ -17,7 +17,7 @@ export default function Footer() {
                                 </p>
                             </div>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-auto  col-12">
                             <div className="widget d-flex align-items-center">
                                 <div class="icon me-3">
                                     <img src="/info-02.svg"/>
@@ -28,7 +28,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-auto  col-12">
                             <div className="widget d-flex align-items-center">
                                     <div class="icon me-3">
                                         <img src="/info-02.svg"/>
@@ -346,7 +346,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div class="col">
-                        <ul class="nav justify-content-end">
+                        <ul class="nav justify-content-md-end justify-content-center">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Careers</a>
                             </li>
