@@ -1,107 +1,46 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useRef, useEffect } from "react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+function SelectAndInput() {
+  const [selectWidth, setSelectWidth] = useState(0);
+  const [inputWidth, setInputWidth] = useState(0);
+  const selectRef = useRef(null);
+  const inputRef = useRef(null);
 
-// import "./styles.css";
+  useEffect(() => {
+    const select = selectRef.current;
+    const options = select.options;
+    let maxWidth = 0;
 
-// import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+    // Find the maximum width of the option text
+    for (let i = 0; i < options.length; i++) {
+      const optionWidth = options[i].getBoundingClientRect().width;
+      if (optionWidth > maxWidth) {
+        maxWidth = optionWidth;
+      }
+    }
 
-export default function App() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    // Set the width of the select box to accommodate the widest option
+    setSelectWidth(maxWidth + 20); // Add some padding for the dropdown arrow
+  }, [selectWidth]);
+
+  useEffect(() => {
+    const input = inputRef.current;
+    const inputWidth = input.getBoundingClientRect().width;
+
+    // Set the width of the input field to match the width of the select box
+    setInputWidth(selectWidth - 20); // Subtract the padding for the dropdown arrow
+  }, [selectWidth]);
 
   return (
-    <>
-      <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
-        loop={true}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper>
-    </>
+    <div>
+      <select ref={selectRef} style={{ width: selectWidth }}>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2 is longer</option>
+        <option value="option3">Option 3 is the longest</option>
+      </select>
+      <input ref={inputRef} style={{ width: inputWidth }} />
+    </div>
   );
 }
+
+export default SelectAndInput;

@@ -86,7 +86,11 @@ export default function ProductCarousel({ products, itemCount, caroselTitle, fla
                   spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: {itemCount},
+                  slidesPerView: itemCount - 2,
+                  spaceBetween: 20,
+                },
+                1200: {
+                  slidesPerView: itemCount,
                   spaceBetween: 20,
                 },
               }}

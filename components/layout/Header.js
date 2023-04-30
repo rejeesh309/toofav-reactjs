@@ -133,6 +133,39 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+
+            <div className='mob-bottom-bar'>
+                <div className='container-fluid'>
+                    <ul class="nav justify-content-between ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" aria-current="page">
+                                <img className='icn' src='/home.svg'/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"   onClick={cartShow}>
+                                <img className='icn' src='/cart-02.svg'/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cate-mid" href="#">
+                                <img className='icn' src='/categories.svg'/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onClick={wishlistShow}>
+                                <img className='icn' src='/love-02.svg'/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img className='icn' src='/profile-02.svg'/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <Navbar bg="" expand="lg" className='d-none d-md-block navbar navbar-expand-lg bg-body-tertiary'>
             <Container fluid>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

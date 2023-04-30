@@ -663,10 +663,7 @@ export default function Home({ products }) {
       <section class="prdct-ban-sldr">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-8 col-lg-9">
-                <ProductCarousel  itemCount={6} caroselTitle={"Electronics"}/>
-              </div>
-              <div class="col-md-4 col-lg-3">
+              <div class="col-md-4 col-lg-3 order-md-2">
                         <div class="vertic-img-area">
                           <Image
                             className='offer-image'
@@ -675,6 +672,9 @@ export default function Home({ products }) {
                             fill
                           />
                         </div>
+              </div>
+              <div class="col-md-8 col-lg-9 order-md-1">
+                <ProductCarousel  itemCount={6} caroselTitle={"Electronics"}/>
               </div>
             </div>
           </div>

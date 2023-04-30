@@ -1,4 +1,6 @@
-import React from 'react';
+
+import React, { useEffect, useState } from "react";
+import Button from 'react-bootstrap/Button';
 import MainBanner from "@/components/MainBanner"
 import ProductItemCard from "@/components/ProductCard";
 import Form from 'react-bootstrap/Form';
@@ -22,6 +24,7 @@ export default function ProductList() {
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
+
                             <div class="fliter-card">
                                 {/* Categories */}
                                 <div class="fliter-widget categories-filter">
@@ -322,9 +325,11 @@ export default function ProductList() {
                             </section>
                             <section class="product-list-area">
                                 <div class="top-sec d-flex justify-content-between">
-                                    <h2 class="title flex-grow-1"><span class="none-bold">8784 Results for</span> "Women's Fashion"</h2>
-                                    <div  class="right-action d-flex align-items-center">
-                                        <label class="form-label text-nowrap mb-0 me-2">Sort by</label>
+                                        {/* <Button className='btn btn-filter only-mob order-md-2' onClick={filterShow}>
+                                            <img src='/filter-icon.svg' className='hamburg-icon'/><span>Filter</span>
+                                        </Button> */}
+                                    <div  class="right-action d-flex align-items-center order-md-2">
+                                        <label class="form-label text-nowrap mb-0 me-3">Sort by</label>
                                         <Form.Select aria-label="Default select example">
                                             <option>Recommended </option>
                                             <option value="1">One</option>
@@ -332,6 +337,7 @@ export default function ProductList() {
                                             <option value="3">Three</option>
                                         </Form.Select>
                                     </div>
+                                    <h2 class="title flex-grow-1 order-md-1"><span class="none-bold">8784 Results for</span> "Women's Fashion"</h2>
                                 </div>
                                 <div class="selected-filters">
                                     <div class="filter-item">
@@ -342,40 +348,40 @@ export default function ProductList() {
 
                                 <div class="product-list">
                                     <div class="row g-2">
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
                                     </div>
@@ -416,40 +422,40 @@ export default function ProductList() {
 
 
                                     <div class="row g-2">
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3   col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
-                                        <div class="col-lg-2 col-md-3">
+                                        <div class="col-lg-2 col-md-3  col-6">
                                             <ProductItemCard/>
                                         </div>
                                     </div>
