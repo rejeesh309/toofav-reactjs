@@ -12,6 +12,11 @@ import OrderDetails from '@/components/OrderDetails';
 
 export default function Account() {
 
+    const [addNewAddress, setShow4] = useState(false);
+
+    const addNewAddressClose = () => setShow4(false);
+    const addNewAddressShow = () => setShow4(true);
+
     const [rechargeWallet, setShow7] = useState(false);
     const rechargeWalletClose = () => setShow7(false);
     const rechargeWalletShow = () => setShow7(true);
@@ -68,6 +73,12 @@ export default function Account() {
                       <Nav.Item>
                         <Nav.Link eventKey="accounts">
                           Manage Accounts{" "}
+                          <img className="icn" src="/right-arrow-01.svg" />
+                        </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="address">
+                          Address Book{" "}
                           <img className="icn" src="/right-arrow-01.svg" />
                         </Nav.Link>
                       </Nav.Item>
@@ -353,6 +364,131 @@ export default function Account() {
                       </div>
                       <OrderDetails />
 
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="address">
+                      <div className="my-payment-wrap">
+                        <h2 className="main-title">Address Book</h2>
+                        <div className='address-wrap'>
+                            <div className='row'>
+                                <div className='col-md-6'>
+                                    <div  className='dcard-wrap' style={{height: "calc(100% - 15px)"}}>
+                                        <div className='add-new-card'  onClick={addNewAddressShow}>
+                                            <h4 className='txt'>Add New Address</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-md-6'>
+                                    <div className='list-wrap mx-0'>
+                                      <label class="list-group-item mb-3">
+                                          <input class="form-check-input me-1" name='addrs' type="radio" value=""/>
+                                          <div className='ms-2'>
+                                              <h5 className='name'>Jhone Doe</h5>
+                                              <p className='txt'>100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085</p>
+                                              <div className='bottom-bar'>
+                                                  <p className='mobile'>
+                                                    <img src='/mobile-01.svg' className='icon me-2'/>
+                                                    +91 2345 6789
+                                                  </p>
+                                                  <div className='btn-wrap'>
+                                                    <a className='icon'><img src='/edit-01.svg'/></a>
+                                                    <a className='icon'><img src='/delete-01.svg'/></a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </label>
+                                    </div>
+                                </div>
+                                
+                                <div className='col-md-6'>
+                                    <div className='list-wrap mx-0'>
+                                      <label class="list-group-item mb-3">
+                                          <input class="form-check-input me-1" name='addrs' type="radio" value=""/>
+                                          <div className='ms-2'>
+                                              <h5 className='name'>Jhone Doe</h5>
+                                              <p className='txt'>100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085</p>
+                                              <div className='bottom-bar'>
+                                                  <p className='mobile'>
+                                                    <img src='/mobile-01.svg' className='icon me-2'/>
+                                                    +91 2345 6789
+                                                  </p>
+                                                  <div className='btn-wrap'>
+                                                    <a className='icon'><img src='/edit-01.svg'/></a>
+                                                    <a className='icon'><img src='/delete-01.svg'/></a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </label>
+                                    </div>
+                                </div>
+                                
+                                <div className='col-md-6'>
+                                    <div className='list-wrap mx-0'>
+                                      <label class="list-group-item mb-3">
+                                          <input class="form-check-input me-1" name='addrs' type="radio" value=""/>
+                                          <div className='ms-2'>
+                                              <h5 className='name'>Jhone Doe</h5>
+                                              <p className='txt'>100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085</p>
+                                              <div className='bottom-bar'>
+                                                  <p className='mobile'>
+                                                    <img src='/mobile-01.svg' className='icon me-2'/>
+                                                    +91 2345 6789
+                                                  </p>
+                                                  <div className='btn-wrap'>
+                                                    <a className='icon'><img src='/edit-01.svg'/></a>
+                                                    <a className='icon'><img src='/delete-01.svg'/></a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </label>
+                                    </div>
+                                </div>
+                                
+                                <div className='col-md-6'>
+                                    <div className='list-wrap mx-0'>
+                                      <label class="list-group-item mb-3">
+                                          <input class="form-check-input me-1" name='addrs' type="radio" value=""/>
+                                          <div className='ms-2'>
+                                              <h5 className='name'>Jhone Doe</h5>
+                                              <p className='txt'>100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085</p>
+                                              <div className='bottom-bar'>
+                                                  <p className='mobile'>
+                                                    <img src='/mobile-01.svg' className='icon me-2'/>
+                                                    +91 2345 6789
+                                                  </p>
+                                                  <div className='btn-wrap'>
+                                                    <a className='icon'><img src='/edit-01.svg'/></a>
+                                                    <a className='icon'><img src='/delete-01.svg'/></a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </label>
+                                    </div>
+                                </div>
+
+                                <div className='col-md-6'>
+                                    <div className='list-wrap mx-0'>
+                                      <label class="list-group-item mb-3">
+                                          <input class="form-check-input me-1" name='addrs' type="radio" value=""/>
+                                          <div className='ms-2'>
+                                              <h5 className='name'>Jhone Doe</h5>
+                                              <p className='txt'>100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085</p>
+                                              <div className='bottom-bar'>
+                                                  <p className='mobile'>
+                                                    <img src='/mobile-01.svg' className='icon me-2'/>
+                                                    +91 2345 6789
+                                                  </p>
+                                                  <div className='btn-wrap'>
+                                                    <a className='icon'><img src='/edit-01.svg'/></a>
+                                                    <a className='icon'><img src='/delete-01.svg'/></a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="payments">
                       <div className="my-payment-wrap">
@@ -958,6 +1094,85 @@ export default function Account() {
                     </Form>
                 </Col>
             </Row>
+                </Modal.Body>
+          </Modal>
+
+          {/* Add New Address */}
+          <Modal 
+                show={addNewAddress} 
+                size="lg" 
+                backdrop="static"
+                keyboard={false} 
+                onHide={addNewAddressClose} 
+                className='addNewAddress-pop' 
+                centered>
+                <Modal.Header closeButton className='border-bottom-0'>
+                    <Modal.Title>Add New Address</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                
+                    <Form>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} controlId="formGridname">
+                            <Form.Label>Full name</Form.Label>
+                            <Form.Control type="text" placeholder="Enter name" />
+                            </Form.Group>
+
+                            <Form.Group as={Col} controlId="formGriMobile">
+                            <Form.Label>Mobile number</Form.Label>
+                            <Form.Control type="text" placeholder="Mobile number" />
+                            </Form.Group>
+                        </Row>
+
+                        <Form.Group className="mb-3" controlId="formGridAddress1">
+                            <Form.Label>Address</Form.Label>
+                            <Form.Control placeholder="1234 Main St" />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formGridAddress2">
+                            <Form.Label>Address 2</Form.Label>
+                            <Form.Control placeholder="Apartment, studio, or floor" />
+                        </Form.Group>
+
+                        <Row className="mb-3">
+                            <Form.Group as={Col} controlId="formGridCity">
+                            <Form.Label>City</Form.Label>
+                            <Form.Control />
+                            </Form.Group>
+
+                            <Form.Group as={Col} controlId="formGridState">
+                            <Form.Label>State</Form.Label>
+                            <Form.Select defaultValue="Choose...">
+                                <option>Choose...</option>
+                                <option>...</option>
+                            </Form.Select>
+                            </Form.Group>
+
+                            <Form.Group as={Col} controlId="formGridZip">
+                            <Form.Label>Pin code</Form.Label>
+                            <Form.Control />
+                            </Form.Group>
+                        </Row>
+
+                        <Form.Group className="mb-3 row mx-0" id="formGridRadio">
+                                <Form.Label className='ps-0'>Address Type</Form.Label>
+                                <Form.Check className='col-auto'  type="radio" label="Home" />
+                                <Form.Check className='col-auto'  type="radio" label="Office" />
+                        </Form.Group>
+
+
+                        <Row className="align-items-center">
+                            <Form.Group as={Col} className="mb-3" id="">
+                                <Form.Check type="checkbox" label="Make this default address" />
+                            </Form.Group>
+                            <Form.Group as={Col} className="mb-3 text-end" id="">
+                                <Button variant="primary" type="submit">
+                                    Submit
+                                </Button>
+                            </Form.Group>
+                        </Row>
+                    </Form>
+
                 </Modal.Body>
           </Modal>
         </section>

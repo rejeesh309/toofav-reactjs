@@ -1317,15 +1317,15 @@ export default function Home({ products }) {
 //   }
 // }
 
-export async function getServerSideProps(context){
-  const {params} = context
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts")
-  const data = await res.json()
+// export async function getServerSideProps(context){
+//   const {params} = context
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+//   const data = await res.json()
 
-  return{
-      props: {
-          products: data.slice(0, 15),
-          // countItem,
-      }
-  }
-}
+//   return{
+//       props: {
+//           products: data.slice(0, 15),
+//           // countItem,
+//       }
+//   }
+// }
